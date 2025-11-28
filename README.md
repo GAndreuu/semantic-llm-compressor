@@ -183,4 +183,4 @@ I’m especially interested in:
 - Activation-level diagnostics and safety-preserving optimizations
 - Tooling around LLM internals
 
-Reach me at: [Your Email/LinkedIn]
+Reach me at: [LinkedIn](https://www.linkedin.com/in/gabriel-andreu/)

@@ -1,0 +1,16 @@
+from pathlib import Path
+from semantic_llm_compressor.io.model_index import ModelIndex
+import os
+
+model_dir = Path("models/original/gpt-neo-1.3B")
+print(f"Model dir: {model_dir}")
+print(f"Exists: {model_dir.exists()}")
+
+try:
+    index = ModelIndex.load(model_dir)
+    print("Successfully loaded index!")
+    print(f"Keys: {len(index.weight_map)}")
+except Exception as e:
+    print(f"Failed to load: {e}")
+    import traceback
+    traceback.print_exc()

@@ -1,0 +1,57 @@
+{
+  "model": "EleutherAI/gpt-neo-1.3B",
+  "compression_config": {
+    "rank": 128,
+    "quant_bits": 8,
+    "min_dim": 1024
+  },
+  "device": "cpu",
+  "num_runs": 3,
+  "max_new_tokens": 50,
+  "original": {
+    "memory_mb": 138.35546875,
+    "inference": {
+      "avg_time_sec": 12.867336333326724,
+      "std_time_sec": 0.11193040960432256,
+      "tokens_per_sec": 3.8858081194705965,
+      "generated_text": "The meaning of life is not a matter of life and death. It is a matter of life and love.\n\nThe meaning of life is not a matter of life and death. It is a matter of life and love.\n\nThe meaning of life is not a"
+    }
+  },
+  "compressed": {
+    "memory_mb": 97.8046875,
+    "num_patched_layers": 24,
+    "num_total_layers": 145,
+    "inference": {
+      "avg_time_sec": 12.41927836666097,
+      "std_time_sec": 0.33599347443729266,
+      "tokens_per_sec": 4.025998816020011,
+      "generated_text": "The meaning of life is the meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning meaning"
+    }
+  },
+  "quality": [
+    {
+      "prompt": "The meaning of life is",
+      "logits_mse": 1.6617858409881592,
+      "max_logit_diff": 7.91651725769043,
+      "cosine_similarity": 0.9970613121986389
+    },
+    {
+      "prompt": "Artificial intelligence will",
+      "logits_mse": 4.279867172241211,
+      "max_logit_diff": 15.272346496582031,
+      "cosine_similarity": 0.9941474795341492
+    },
+    {
+      "prompt": "In the future, technology",
+      "logits_mse": 1.4902700185775757,
+      "max_logit_diff": 6.772863388061523,
+      "cosine_similarity": 0.9964538812637329
+    }
+  ],
+  "summary": {
+    "memory_reduction_percent": 29.309127869222735,
+    "speed_change_percent": 3.6077616866093285,
+    "avg_logits_mse": 2.477307677268982,
+    "avg_cosine_similarity": 0.995887557665507
+  }
+}
